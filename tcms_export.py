@@ -11,10 +11,11 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 import traceback
 from datetime import datetime
 
-TCMS_HOST = "{YOUR HOST NAME OR IP}"            # Kiwi TCMS Host
+TCMS_HOST = input(f"HOST NAME OR IP (without http(s) and slashes): ")            # Kiwi TCMS Host
+TCMS_HOST = 'https://'+TCMS_HOST
 TCMS_API = "/xml-rpc/"                          # Kiwi TCMS API Path
-TCMS_HOST_LOGIN = "{YOUR ADMIN LOGIN NAME}"     # Admin login
-TCMS_HOST_PASS = "{YOUR ADMIN PASSWORD}"        # Admin pass
+TCMS_HOST_LOGIN = input(f"ADMIN LOGIN NAME: ")     # Admin login
+TCMS_HOST_PASS = input(f"ADMIN PASSWORD: ")        # Admin pass
 SSL_Verify = False                              # Disabling SSL Verify
 TCMS_TYPE_ID = 0
 TCMS_TYPE_NAME = 'plan'
